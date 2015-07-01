@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Filters -->
+   
+   
+	<filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+      <filter-name>springSecurityFilterChain</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+     
+  
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener> 
+  
+  
+  
+<!-- Servlets --> 
+
+<servlet>
+    <servlet-name>MdbGatewayServiceImpl</servlet-name>
+    <servlet-class>iplatform.admin.ui.server.communication.rpc.mdbgw.MdbGatewayServiceImpl</servlet-class>
+  </servlet> 	
+  
+  <servlet-mapping>
+    <servlet-name>MdbGatewayServiceImpl</servlet-name>
+    <url-pattern>/iPlatformAdminUI/gateway</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>authServlet</servlet-name>
+    <servlet-class>iplatform.admin.ui.server.communication.rpc.MyAuthServiceImpl</servlet-class>
+  </servlet> 	
+  
+  <servlet-mapping>
+    <servlet-name>authServlet</servlet-name>
+    <url-pattern>/iPlatformAdminUI/auth</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- Servlets -->
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <session-config>
+	  <session-timeout>60</session-timeout>
+  </session-config>
+  
+
+
+</web-app>
