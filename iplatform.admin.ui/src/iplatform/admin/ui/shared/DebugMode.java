@@ -11,6 +11,6 @@ package iplatform.admin.ui.shared;
 public class DebugMode {
 	
 	public static boolean isActive() {
-		return false;
+		return true;
 	}
 }

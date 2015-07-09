@@ -8,5 +8,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/smartGWT"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/mdb.core.shared"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/spring-security"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

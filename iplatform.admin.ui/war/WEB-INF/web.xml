@@ -7,7 +7,7 @@
 
 	<!-- Filters -->
    
-   
+   <!-- 
 	<filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -23,7 +23,7 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener> 
   
-  
+  -->
   
 <!-- Servlets --> 
 

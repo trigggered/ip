@@ -18,8 +18,18 @@ public class MdbEntityConst {
 	
 	public final static int BRANCHES = 5595;
 	public final static int CURRENCY = 5596;
+	public final static int UA_BANKS = 5609;
+	
 	
 	public final static int ClI_INDIVIDUAL = 5597;
+	public static final int ACC_LIST = 5608;
+	public static final int USERS  = 5611;
+	
+	public static final int CliIndividualCard = 0;
+	public static final int CliAccounts = 0;
+	public static final int CliPlasticCards = 0;
+	public static final int CliLoans = 0;
+	public static final int CliDeposits = 0;
 	
 	
 }

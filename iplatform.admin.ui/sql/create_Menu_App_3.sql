@@ -35,7 +35,7 @@ insert into mdb.app_menu (id_menu_parent, id_app, name)
   values (null, l_appId, 'Клиенты') returning id_menu  into l_menuId;
   
   insert into mdb.app_menu (id_menu_parent, id_app, name, action)
-  values (l_menuId, l_appId, 'Физические лица', 'CliIndividual');
+  values (l_menuId, l_appId, 'Физические лица', 'ClientListIndividual');
   
   insert into mdb.app_menu (id_menu_parent, id_app, name, action)
   values (l_menuId, l_appId, 'Юридические лица', 'CliLeagal');
@@ -64,6 +64,8 @@ insert into mdb.app_menu (id_menu_parent, id_app, name)
  insert into mdb.app_menu (id_menu_parent, id_app, name, action)    
      values (l_menuId, l_appId, 'Отделения','DicBranches');            
   
+  insert into mdb.app_menu (id_menu_parent, id_app, name, action)    
+     values (l_menuId, l_appId, 'Банки Украины','DicUaBanks');
 	
   
   /*Администрирование*/
