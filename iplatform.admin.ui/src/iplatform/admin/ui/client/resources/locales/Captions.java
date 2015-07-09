@@ -19,4 +19,9 @@ public class Captions extends mdb.core.ui.client.resources.locales.Captions {
 	public static final String CURRENCY = "Список валют";
 	public static final String ACCOUNTS = "Список счетов";
 	public static final String CLI_INDIVIDUAL = "Клиенты (физические лица)";
+
+	public static final String UA_BANKS = "Банки Украины";
+
+	public static final String USERS = "Пользователи";
+	
 }

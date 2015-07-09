@@ -13,11 +13,14 @@ public enum EViewIdent {
 	Home,
 	DicCurrency,
 	DicBranches,
-	Search,
-	AccAll,
+	DicUaBanks,
 	
-	CliIndividual,
-	CliLeagal,
+	
+	Search,
+	AccountList,
+	
+	ClientListIndividual,
+	ClientListLeagal,
 	Users
 	
 }

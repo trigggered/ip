@@ -22,7 +22,13 @@ public class DictionaryViewFactory {
 				dictionary = new DictionaryGridView(viewIdent);
 				mainEntityId  = MdbEntityConst.CURRENCY;
 				captions = Captions.CURRENCY;
-				break;		
+				break;
+				
+			case DicUaBanks:
+				dictionary = new DictionaryGridView(viewIdent);
+				mainEntityId  = MdbEntityConst.UA_BANKS;
+				captions = Captions.UA_BANKS;
+				break;	
 		}				
 		
 		
