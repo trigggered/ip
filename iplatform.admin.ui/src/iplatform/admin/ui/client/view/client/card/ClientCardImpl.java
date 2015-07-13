@@ -27,18 +27,45 @@ public class ClientCardImpl  extends ACard {
 			.getName());
 	
 	enum  EDataSection {
-		Main,
-		Accounts,
-		Contact,
-		Addreses,
-		IdentDocs,
-		Identifications,
-		PlasticCards,
-		Loants,
-		Deposits,
-		Profiles
-	}
-	
+		Main(1),
+		Accounts(2),
+		Contact(3),
+		Addreses(4),
+		IdentDocs(5),
+		Identifications(6),
+		PlasticCards(7),
+		Loants(8),
+		Deposits(9),
+		Profiles(10)
+		;
+		public static EDataSection  fromInt(int value) {			
+			switch (value ) {
+				case 1: return Main;
+				case 2: return Accounts;		
+				case 3: return Contact;
+				case 4: return Addreses;
+				case 5: return IdentDocs;			
+				case 6: return Identifications;
+				case 7: return PlasticCards;
+				case 8: return Loants;
+				case 9: return Deposits;
+				case 10: return Profiles;				
+			}
+			return null;
+		 }		
+		
+		
+		private int _value;
+		
+		public int getValue() {
+		    return _value;
+	   }
+		
+		private EDataSection (int value) {
+			_value = value;
+		}
+		
+	}	
 
 	/* (non-Javadoc)
 	 * @see mdb.core.ui.client.view.data.card.ICard#getCardEntityId()
@@ -83,10 +110,10 @@ public class ClientCardImpl  extends ACard {
 	 */
 	@Override
 	protected void createGridSections() {
-		DataSectionInit.init(createDataSection (EDataSection.Accounts.toString(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EDataSection.PlasticCards.toString(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EDataSection.Loants.toString(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EDataSection.Deposits.toString(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EDataSection.Accounts.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EDataSection.PlasticCards.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EDataSection.Loants.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EDataSection.Deposits.getValue(), ESectionType.Grid));
 		
 		
 	}
@@ -96,7 +123,7 @@ public class ClientCardImpl  extends ACard {
 	 */
 	@Override
 	protected void createFieldSections() {		
-		DataSectionInit.init(createDataSection (EDataSection.Main.toString(), ESectionType.Fields));
+		DataSectionInit.init(createDataSection (EDataSection.Main.getValue(), ESectionType.Fields));
 		
 	}
 
@@ -154,5 +181,5 @@ public class ClientCardImpl  extends ACard {
 		
 		return toReturn;
 	}
-	
+
 }

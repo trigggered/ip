@@ -25,7 +25,12 @@ public class DataSectionInit {
 	
 	public static void init(IDataSection  section) {
 		
-		EDataSection sectionIdent =  EDataSection.valueOf( section.getSectionId());
+		
+		EDataSection sectionIdent =  EDataSection.fromInt(section.getSectionId());
+		
+		
+		
+		_logger.info("Init section ="+sectionIdent.toString());
 		
 		section.getParams().add("CLIENTID", String.valueOf(section.getCard().getId()));
 		
@@ -61,6 +66,8 @@ public class DataSectionInit {
 		case Deposits:
 			section.setMainEntityId(MdbEntityConst.CliDeposits);			
 			section.setCaption( Captions.Deposits);
+			break;
+		default:
 			break;
 		}
 	}
