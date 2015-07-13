@@ -32,5 +32,11 @@ public class Captions extends mdb.core.ui.client.resources.locales.Captions {
 	public static final String Loans = "Кредиты";
 
 	public static final String Deposits = "Депозиты";
+
+	public static final String Contacts = "Контакты";
+
+	public static final String IdentDocs = "Идентификационные документы";
+
+	public static final String DIC_SEC_PROFILES = "Профили безопасности";
 	
 }

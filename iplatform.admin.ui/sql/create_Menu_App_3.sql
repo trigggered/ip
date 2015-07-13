@@ -46,7 +46,7 @@ insert into mdb.app_menu (id_menu_parent, id_app, name)
   values (null, l_appId, 'Счета') returning id_menu  into l_menuId;
   
   insert into mdb.app_menu (id_menu_parent, id_app, name, action)
-  values (l_menuId, l_appId, 'Все счета', 'AccAll');
+  values (l_menuId, l_appId, 'Все счета', 'AccountList');
   
   
   insert into mdb.app_menu (id_menu_parent, id_app, name, img_path, action, shortcut_key,visible)
@@ -72,6 +72,9 @@ insert into mdb.app_menu (id_menu_parent, id_app, name)
   insert into mdb.app_menu (id_menu_parent, id_app, name)
     values (null, l_appId, 'Администрирование') returning id_menu  into l_menuId;
  
+ insert into mdb.app_menu (id_menu_parent, id_app, name, action)    
+     values (l_menuId, l_appId, 'Профили безопасности','DicSecProfiles');            
+     
  insert into mdb.app_menu (id_menu_parent, id_app, name, action)    
      values (l_menuId, l_appId, 'Пользователи','Users');            
  

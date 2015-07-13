@@ -14,7 +14,7 @@ public enum EViewIdent {
 	DicCurrency,
 	DicBranches,
 	DicUaBanks,
-	
+	DicSecProfiles,
 	
 	Search,
 	AccountList,

@@ -22,14 +22,17 @@ public class MdbEntityConst {
 	
 	
 	public final static int ClI_INDIVIDUAL = 5597;
-	public static final int ACC_LIST = 5608;
+	public static final int ACCOUNTS = 5608;
 	public static final int USERS  = 5611;
 	
-	public static final int CliIndividualCard = 0;
-	public static final int CliAccounts = 0;
-	public static final int CliPlasticCards = 0;
-	public static final int CliLoans = 0;
-	public static final int CliDeposits = 0;
+	
+	
+	public static final int CliContact = 5648;
+	public static final int CliPlasticCards = -1;
+	public static final int CliLoans = -1;
+	public static final int CliDeposits = -1;
+	public static final int IdentDocs = 5649;
+	public static final int DIC_SEC_PROFILES = 5628;
 	
 	
 }

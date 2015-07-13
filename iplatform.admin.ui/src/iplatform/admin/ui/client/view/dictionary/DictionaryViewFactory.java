@@ -29,6 +29,11 @@ public class DictionaryViewFactory {
 				mainEntityId  = MdbEntityConst.UA_BANKS;
 				captions = Captions.UA_BANKS;
 				break;	
+			case DicSecProfiles:
+				dictionary = new DictionaryGridView(viewIdent);
+				mainEntityId  = MdbEntityConst.DIC_SEC_PROFILES;
+				captions = Captions.DIC_SEC_PROFILES;
+				break;
 		}				
 		
 		

@@ -41,6 +41,7 @@ public class ViewFactory {
 		case DicBranches:
 		case DicCurrency:
 		case DicUaBanks:
+		case DicSecProfiles:
 				return DictionaryViewFactory.create(viewIdent);
 		case ClientListIndividual: {
 			IDataView view  = new ClientList();						
@@ -48,9 +49,7 @@ public class ViewFactory {
 		}
 		case AccountList:
 			{
-				IDataView view  = new AccountList();
-				view.setMainEntityId(MdbEntityConst.ACC_LIST);
-				view.setCaption(Captions.ACCOUNTS);
+				IDataView view  = new AccountList();				
 				return view;
 			}
 		

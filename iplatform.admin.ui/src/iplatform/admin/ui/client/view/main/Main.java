@@ -151,18 +151,12 @@ public class Main extends AMainView   {
 	    	return "Graphite";
 	 }
 	 
-	 @Override
-	 protected LinkedHashMap<String, String>  getSkinMapValues() {	    	
-	    	LinkedHashMap<String, String> valueMap = new LinkedHashMap<String, String>();
-	        valueMap.put("Graphite", "Graphite");
-	 
-	        return valueMap;
-	 }
+
 	 
 	 @Override
 	 protected DynamicForm  getSkinControlComponent() {
 		 DynamicForm   toReturn = super.getSkinControlComponent();
-		 toReturn.setVisible(false);
+		 toReturn.setVisible(true);
 		 return toReturn;
 	 }
 	

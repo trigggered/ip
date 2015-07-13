@@ -42,4 +42,6 @@ public class ClientList extends GridView {
 		
 		addEditEvent(openCardHandler);
 	}
+	
+	
 }
