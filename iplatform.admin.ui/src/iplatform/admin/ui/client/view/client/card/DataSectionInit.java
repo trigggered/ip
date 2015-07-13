@@ -10,7 +10,7 @@ import com.smartgwt.client.data.Record;
 import mdb.core.ui.client.events.IDataEditHandler;
 import mdb.core.ui.client.view.data.card.section.IDataSection;
 
-import iplatform.admin.ui.client.view.client.card.ClientCardImpl.EDataSection;
+import iplatform.admin.ui.client.view.client.card.ClientCardImpl.EClientCardSection;
 import iplatform.admin.ui.shared.MdbEntityConst;
 import iplatform.admin.ui.client.resources.locales.Captions;
 
@@ -26,7 +26,7 @@ public class DataSectionInit {
 	public static void init(IDataSection  section) {
 		
 		
-		EDataSection sectionIdent =  EDataSection.fromInt(section.getSectionId());
+		EClientCardSection sectionIdent =  EClientCardSection.fromInt(section.getSectionId());
 		
 		
 		

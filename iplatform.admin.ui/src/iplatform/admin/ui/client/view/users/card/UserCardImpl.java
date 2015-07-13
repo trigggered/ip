@@ -1,7 +1,8 @@
 /**
  * 
  */
-package iplatform.admin.ui.client.view.client.card;
+package iplatform.admin.ui.client.view.users.card;
+
 
 import iplatform.admin.ui.client.view.client.checkers.CheckClientExists;
 
@@ -11,45 +12,28 @@ import mdb.core.ui.client.app.AppController;
 import mdb.core.ui.client.data.checkers.IChecker;
 import mdb.core.ui.client.view.data.IDataView;
 import mdb.core.ui.client.view.data.card.ACard;
-import mdb.core.ui.client.view.data.card.section.IDataSection.ESectionType;
 
 import com.smartgwt.client.data.Record;
 import com.smartgwt.client.util.BooleanCallback;
 
-
 /**
  * @author azhuk
- * Creation date: Jul 10, 2015
+ * Creation date: Jul 13, 2015
  *
  */
-public class ClientCardImpl  extends ACard {
-	private static final Logger _logger = Logger.getLogger(ClientCardImpl.class
+public class UserCardImpl extends ACard {
+	private static final Logger _logger = Logger.getLogger(UserCardImpl.class
 			.getName());
-	
+
 	enum  EClientCardSection {
 		Main(1),
-		Accounts(2),
-		Contact(3),
-		Addreses(4),
-		IdentDocs(5),
-		Identifications(6),
-		PlasticCards(7),
-		Loants(8),
-		Deposits(9),
-		Profiles(10)
+		Profiles(2)
 		;
+		
 		public static EClientCardSection  fromInt(int value) {			
 			switch (value ) {
 				case 1: return Main;
-				case 2: return Accounts;		
-				case 3: return Contact;
-				case 4: return Addreses;
-				case 5: return IdentDocs;			
-				case 6: return Identifications;
-				case 7: return PlasticCards;
-				case 8: return Loants;
-				case 9: return Deposits;
-				case 10: return Profiles;				
+				case 2: return Profiles;				
 			}
 			return null;
 		 }		
@@ -64,9 +48,35 @@ public class ClientCardImpl  extends ACard {
 		private EClientCardSection (int value) {
 			_value = value;
 		}
-		
-	}	
 
+	
+	}
+	
+	public static void OpenById(final String clientId) {
+		
+		IChecker checker = new CheckClientExists(clientId);		
+		
+		checker.check(new BooleanCallback() {			
+			@Override
+			public void execute(Boolean value) {
+				if (value) {
+					AppController.getInstance().getMainView().openViewInTab(createCard (clientId));
+				}
+				
+			}
+		});					
+		
+	}
+	
+	public static IDataView createCard(String clientId) {
+		UserCardImpl  toReturn = new UserCardImpl();
+		toReturn.setSingleInstance(true);
+		toReturn.setViewState(EViewState.Edit);
+		toReturn.setId(Long.parseLong(clientId));	
+		
+		return toReturn;
+	}
+	
 	/* (non-Javadoc)
 	 * @see mdb.core.ui.client.view.data.card.ICard#getCardEntityId()
 	 */
@@ -103,28 +113,22 @@ public class ClientCardImpl  extends ACard {
 		return false;
 	}
 
-	
-	
 	/* (non-Javadoc)
 	 * @see mdb.core.ui.client.view.data.card.ACard#createGridSections()
 	 */
 	@Override
 	protected void createGridSections() {
-		DataSectionInit.init(createDataSection (EClientCardSection.Accounts.getValue(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EClientCardSection.PlasticCards.getValue(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EClientCardSection.Loants.getValue(), ESectionType.Grid));
-		DataSectionInit.init(createDataSection (EClientCardSection.Deposits.getValue(), ESectionType.Grid));
-		
-		
+		// TODO Auto-generated method stub
+
 	}
 
 	/* (non-Javadoc)
 	 * @see mdb.core.ui.client.view.data.card.ACard#createFieldSections()
 	 */
 	@Override
-	protected void createFieldSections() {		
-		DataSectionInit.init(createDataSection (EClientCardSection.Main.getValue(), ESectionType.Fields));
-		
+	protected void createFieldSections() {
+		// TODO Auto-generated method stub
+
 	}
 
 	/* (non-Javadoc)
@@ -133,7 +137,7 @@ public class ClientCardImpl  extends ACard {
 	@Override
 	public void visibleButtons(Boolean[] visibles) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	/* (non-Javadoc)
@@ -142,44 +146,15 @@ public class ClientCardImpl  extends ACard {
 	@Override
 	protected void doBindDataIfNewState() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
-	
-	
 	/* (non-Javadoc)
 	 * @see mdb.core.ui.client.view.data.card.ACard#doPrepareRequestDataIdNewState()
 	 */
 	@Override
 	protected void doPrepareRequestDataIdNewState() {
 		// TODO Auto-generated method stub
-		
-	}
-	
-	public static void OpenById(final String clientId) {
-		
-		IChecker checker = new CheckClientExists(clientId);		
-		checker.check(new BooleanCallback() {			
-		
-			@Override
-			public void execute(Boolean value) {
-				if (value) {
-					AppController.getInstance().getMainView().openViewInTab(createCard (clientId));
-				}
-				
-			}
-		});					
-		
-	}
-	
-	public static IDataView createCard(String clientId) {
-		ClientCardImpl  toReturn = new ClientCardImpl();
-		toReturn.setSingleInstance(true);
-		toReturn.setViewState(EViewState.Edit);
-		toReturn.setId(Long.parseLong(clientId));	
-		
-		return toReturn;
-	}
 
+	}
 }
