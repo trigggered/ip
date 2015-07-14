@@ -72,8 +72,7 @@ public class UserCardImpl extends ACard {
 	public static IDataView createCard(String clientId) {
 		UserCardImpl  toReturn = new UserCardImpl();
 		toReturn.setSingleInstance(true);
-		toReturn.setViewState(EViewState.Edit);
-		toReturn.setCardId(Long.parseLong(clientId));	
+		toReturn.setViewState(EViewState.Edit);			
 		
 		return toReturn;
 	}
