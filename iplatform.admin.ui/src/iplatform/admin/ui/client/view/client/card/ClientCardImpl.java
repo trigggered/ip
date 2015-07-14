@@ -126,6 +126,10 @@ public class ClientCardImpl  extends ACard {
 		addSection(DataSectionInit.init(createDataSection (EClientCardSection.PlasticCards.getValue(), ESectionType.Grid)));
 		addSection(DataSectionInit.init(createDataSection (EClientCardSection.Loants.getValue(), ESectionType.Grid)));
 		addSection(DataSectionInit.init(createDataSection (EClientCardSection.Deposits.getValue(), ESectionType.Grid)));		
+		DataSectionInit.init(createDataSection (EClientCardSection.Accounts.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EClientCardSection.PlasticCards.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EClientCardSection.Loants.getValue(), ESectionType.Grid));
+		DataSectionInit.init(createDataSection (EClientCardSection.Deposits.getValue(), ESectionType.Grid));
 		
 */
 	}

@@ -27,6 +27,8 @@ public class DataSectionInit {
 		
 		EClientCardSection sectionIdent =  EClientCardSection.fromInt(section.getSectionId());
 		
+
+		
 		
 		_logger.info("Init section ="+sectionIdent.toString());				
 		
