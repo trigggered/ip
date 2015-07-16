@@ -1,9 +1,0 @@
-@import "addons.scss";
-@import "ip_admin_ui.scss";
-
-/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
-/* The actual styles should be defined in ip_admin_ui.scss */
-.ip_admin_ui {
-  @include addons;
-  @include ip_admin_ui;
-}

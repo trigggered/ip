@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE ivy-module [
 	<!ENTITY vaadin.version "7.5.1">
+	<!ENTITY gwt.version "2.6.0">
 ]>
 <ivy-module version="2.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
 	<info organisation="com.example" module="v7proj" />
+	
 	<configurations>
 		<!-- The default configuration, which should be deployed to the server -->
 		<conf name="default" />
@@ -16,7 +18,22 @@
 			Should be deployed to the server -->
 		<conf name="nodeploy" />
 	</configurations>
-	<dependencies defaultconf="default" defaultconfmapping="default->default">
+	<dependencies defaultconf="default" defaultconfmapping="default->default">	
+		<!-- GWT  -->
+		<dependency org="com.google.gwt" name="gwt-user" rev="&gwt.version;" />
+		
+			<!--Jackson-->
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.6.0" />
+		
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.6.0" />
+		
+		<!-- Gson  -->
+		<dependency org="com.google.code.gson" name="gson" rev="2.3.1" />
+		
+		<!-- Gson  -->
+		<dependency org="com.google.guava" name="guava" rev="18.0" />
+		
+						
 		<!-- The core server part of Vaadin -->
 		<dependency org="com.vaadin" name="vaadin-server" rev="&vaadin.version;" />
 
@@ -40,5 +57,16 @@
 		<!-- Compiler for custom widget sets. Should not be deployed -->
 		<dependency org="com.vaadin" name="vaadin-client-compiler"
 			rev="&vaadin.version;" conf="widgetset-compile->default" />
+			
+		<!-- Message box -->
+		<dependency   org="de.steinwedel.vaadin.addon"  name="messagebox"  rev="2.0.7" />
+			
+			<dependency 
+   org="org.vaadin.addons" 
+   name="vaadin-grid-util" 
+   rev="1.0.7" />
+   
+					
+			
 	</dependencies>
 </ivy-module>

@@ -3,6 +3,9 @@
 	<name>ip.admin.ui</name>
 	<comment></comment>
 	<projects>
+		<project>mdb.core.shared</project>
+		<project>mdb.core.ui</project>
+		<project>mdb.core.vaadin</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

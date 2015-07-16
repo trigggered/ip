@@ -22,5 +22,7 @@
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=ip.admin.ui&amp;ivyXmlPath=ivy.xml&amp;confs=widgetset-compile&amp;ivySettingsPath=%24%7Bworkspace_loc%3Aip.admin.ui%2Fivysettings.xml%7D&amp;loadSettingsOnDemand=false&amp;ivyUserDir=&amp;propertyFiles="/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=ip.admin.ui&amp;ivyXmlPath=ivy.xml&amp;confs=nodeploy&amp;ivySettingsPath=%24%7Bworkspace_loc%3Aip.admin.ui%2Fivysettings.xml%7D&amp;loadSettingsOnDemand=false&amp;ivyUserDir=&amp;propertyFiles="/>
 	<classpathentry combineaccessrules="false" kind="src" path="/mdb.core.ui"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mdb.core.shared"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mdb.core.vaadin"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

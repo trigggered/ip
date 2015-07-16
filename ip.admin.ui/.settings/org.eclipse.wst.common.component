@@ -2,6 +2,15 @@
     <wb-module deploy-name="ip.admin.ui">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mdb.core.shared.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/mdb.core.shared/mdb.core.shared">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mdb.core.ui.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/mdb.core.ui/mdb.core.ui">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mdb.core.vaadin.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/mdb.core.vaadin/mdb.core.vaadin">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ip.admin.ui"/>
         <property name="java-output-path" value="/ip.admin.ui/build/classes"/>
     </wb-module>
